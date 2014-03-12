@@ -47,10 +47,10 @@ class Deck(object):
         return random.shuffle(self.cards)
     
     def deal(self, num_cards):
-        new_hand = Hand()
+        new_hand = []
         for cards in range(num_cards):
-            .append(self.cards.pop)
-        return hand
+            new_hand.append(self.cards.pop())
+        return new_hand
 
 class Hand(object):
     def __init__(self):
@@ -90,3 +90,5 @@ print(repr(myDeck))
 
 myHand = myDeck.deal(2)
 print(myHand)
+type(myHand)
+print(repr(myDeck))
