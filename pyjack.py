@@ -45,11 +45,30 @@ class Deck(object):
 
     def shuffle(self):
         return random.shuffle(self.cards)
-        
+    
+    def deal(self, num_cards):
+        new_hand = Hand()
+        for cards in range(num_cards):
+            .append(self.cards.pop)
+        return hand
+
+class Hand(object):
+    def __init__(self):
+        self.cards = []
+    
+    def __str__(self):
+        cards_str = ""
+        for card in self.cards:
+            cards_str += str(card) + "\n"
+        return cards_str
+
+    def __repr__(self):
+        cards_repr = ""
+        for card in self.cards:
+            cards_repr += repr(card) + " "
+        return cards_repr
 
 
-class Hand(Deck):
-    pass
 
 
 
@@ -68,3 +87,6 @@ print(repr(myDeck))
 
 myDeck.shuffle()
 print(repr(myDeck))
+
+myHand = myDeck.deal(2)
+print(myHand)
