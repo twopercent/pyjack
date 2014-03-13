@@ -71,24 +71,19 @@ class Hand(object):
 
 
 
-
-print ("Hello World!")
-
-myCard = Card("7","H")
-hollysCard = Card("diamonds", "ace")
-
-print(myCard)
-print(repr(myCard))
-
-print("Hollys card is the " + hollysCard.rank + " of " + hollysCard.suit)
-
 myDeck = Deck()
-print(repr(myDeck))
-
 myDeck.shuffle()
+
 print(repr(myDeck))
 
+dealerHand = myDeck.deal(2)
 myHand = myDeck.deal(2)
+
+print(dealerHand)
+print(repr(dealerHand))
+
+
 print(myHand)
-type(myHand)
-print(repr(myDeck))
+print(repr(myHand))
+
+
